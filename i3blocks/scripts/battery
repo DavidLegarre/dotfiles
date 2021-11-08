@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+charging=$( acpi | awk '{print $3}'|sed 's/,//')
+bat=$(cat /sys/class/power_supply/BAT0/capacity)
+
+if [ "$charging" == "Discharging" ]; then
+	if [ $bat > 90 ]; then
+		echo :$bat
+	elif (($bat > 80)); then
+		echo :$bat
+	elif (($bat > 70)); then
+		echo :$bat
+	elif (($bat > 60)); then
+		echo :$bat
+	elif (($bat > 50)); then
+		echo :$bat
+	elif (($bat > 40)); then
+		echo :$bat
+	elif (($bat > 30)); then
+		echo :$bat
+	elif (($bat > 20)); then
+		echo :$bat
+	elif (($bat > 10)); then
+		echo :$bat
+	else
+		echo :$bat
+	fi
+else
+	if [ $bat -ge 90 ]; then
+		echo ":$bat"
+
+	elif (($bat >= 70 && $bat < 90)); then
+		echo ":$bat"
+
+	elif (($bat >= 40 && $bat < 70)); then
+		echo ":$bat"
+
+	elif (($bat >= 20 && $bat < 40)); then
+		echo ":$bat"
+
+	elif (($bat < 20)); then
+		echo ":$bat"
+	fi
+fi
+
