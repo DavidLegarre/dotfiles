@@ -163,5 +163,5 @@ purple_fg="\e[38;5;92m"
 green_fg="\e[38;5;22m"
 no_col="\e[0m"
 
-export PS1="\[$black_bg\]\[$purple_fg\]\u@\h\[$grey_bg\]\w\[$green_fg\]\$(parse_git_branch)\[$no_col\]\$ "
+export PS1="\[$black_bg\]\[$purple_fg\]\u@\h\[$grey_bg\]\w\[$green_fg\]\$(parse_git_branch)\[$no_col\]\$\n "
 
