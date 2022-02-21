@@ -49,7 +49,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent 
 
 " Run python
-map <F5>  <Esc>:w<CR>:w !python %<CR>
+autocmd FileType python map <F5>  <Esc>:w<CR>:w !python %<CR>
 
 " NERDTree
 " Open/close NERDTree Tabs with \t
