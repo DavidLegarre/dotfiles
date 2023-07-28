@@ -1,4 +1,4 @@
-original from: ![Antonio Sarosi](https://github.com/antoniosarosi/dotfiles#arch-installation )
+original from: [Antonio Sarosi](https://github.com/antoniosarosi/dotfiles#arch-installation )
 
 # Dotfiles & Configs
 
